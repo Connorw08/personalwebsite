@@ -65,8 +65,8 @@ const Projects = () => {
     {
       id: 7,
       icon: '🧸',
-      title: 'Adaptive Toys Project',
-      tag: 'Carolina Adapts Toys for Children',
+      title: 'Carolina Adapts Toys for Children',
+      tag: 'UNC Organization - Team Lead',
       description: 'A community-focused initiative that transforms standard commercial toys into accessible versions for children with various disabilities. Working with a multidisciplinary team, I helped redesign mechanical and electronic components to create adaptive switches and controls that accommodate limited motor abilities. Each modification is custom-tailored to the specific needs of individual children, often involving the creation of large, high-contrast buttons that can be activated with minimal pressure.',
       technologies: ['Electronics', '3D Printing', 'Circuit Design', 'Inclusive Design'],
       link: 'https://www.catch-inc.com/',
