@@ -71,6 +71,16 @@ const Projects = () => {
       technologies: ['Electronics', '3D Printing', 'Circuit Design', 'Inclusive Design'],
       link: 'https://www.catch-inc.com/',
     },
+    {
+      id: 8,
+      icon: '📱',
+      title: 'StorySnap',
+      tag: 'Android Application',
+      description: 'A creative storytelling application that empowers users to generate unique narratives through images. Users can capture photos or create artwork that gets analyzed by Google Vision Cloud AI to generate descriptive tags. The searchable database allows users to easily retrieve tagged images, and by selecting multiple tagged images, users can generate cohesive stories incorporating these elements using TextCortex AI. The app combines visual creativity with AI-powered storytelling for an engaging user experience.',
+      technologies: ['Java', 'Android SDK', 'Google Vision Cloud AI', 'TextCortex AI', 'SQLite', 'Image Processing'],
+      link: 'https://youtu.be/NN2kZDg_pC8?si=P8e5FCCvTIsKiNsrn',
+      githubLink: 'https://github.com/Connorw08/StorySnap'
+    },
   ];
 
   return (
