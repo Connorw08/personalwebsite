@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-textColor bg-sectionBgLight;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    @apply font-serif mb-2;
+  }
+  
+  h1 {
+    @apply text-5xl mb-4 text-textLight;
+  }
+  
+  h2 {
+    @apply text-4xl text-dark mb-8 text-center relative;
+  }
+  
+  h2::after {
+    content: '';
+    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-[3px] bg-primary;
+  }
+  
+  h3 {
+    @apply text-2xl text-dark;
+  }
+  
+  p {
+    @apply mb-4 leading-7;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container {
+    @apply max-w-7xl mx-auto px-4 md:px-8 py-16;
+  }
+  
+  /* Buttons */
+  .social-button {
+    @apply px-6 py-3 bg-light text-primary rounded-full font-semibold transition-all shadow-md hover:bg-secondary hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .cta-button {
+    @apply px-6 py-3 bg-[#4a6da8] text-white rounded-full font-bold transition-all shadow-md hover:bg-[#3a568a] hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .submit-button {
+    @apply bg-[#4a6da8] text-white px-8 py-4 border-none rounded-full font-bold cursor-pointer transition-all shadow-md hover:bg-[#3a568a] hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  /* Skills tag */
+  .skill-tag {
+    @apply bg-opacity-10 bg-primary text-dark px-5 py-2 rounded-full font-semibold transition-all hover:bg-primary hover:text-textLight hover:-translate-y-1 hover:shadow-md;
+  }
+  
+  /* Fade in animation */
+  .fade-in {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Mobile menu transition */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Form specific styles */
+.form-group input:focus,
+.form-group textarea:focus {
+  @apply outline-none border-primary ring-2 ring-primary ring-opacity-30 bg-white;
+}
+
+/* Success and error messages */
+.success-message {
+  @apply text-white bg-green-500 p-4 rounded-lg mt-4 font-bold text-center shadow-md;
+}
+
+.error-message {
+  @apply text-white bg-red-500 p-4 rounded-lg mt-4 font-bold text-center shadow-md;
+}
