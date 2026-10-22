@@ -68,10 +68,9 @@ function useFontsReady() {
   useEffect(() => {
     let alive = true;
     const timeout = new Promise((r) => setTimeout(r, 1500));
+    // Safari can resolve load() before the face is usable, so also wait for fonts.ready.
     const load = document.fonts
-      ? Promise.all([
-          document.fonts.load('700 96px Archivo'),
-        ])
+      ? document.fonts.load('700 96px Archivo').then(() => document.fonts.ready)
       : Promise.resolve();
     Promise.race([load, timeout]).then(() => alive && setReady(true));
     return () => {
@@ -93,17 +92,36 @@ const Graph = ({ layout, onOpen }) => {
 
   // Fit the name to the sheet, then place anchors and nodes from real measurements.
   const fitPasses = useRef(0);
+  const [refit, setRefit] = useState(0);
+
+  // If a font face arrives after the first fit (seen on iOS Safari), fit again.
+  useEffect(() => {
+    if (!document.fonts) return;
+    const onLoaded = () => {
+      fitPasses.current = 0;
+      setRefit((r) => r + 1);
+    };
+    document.fonts.addEventListener('loadingdone', onLoaded);
+    return () => document.fonts.removeEventListener('loadingdone', onLoaded);
+  }, []);
+
   useLayoutEffect(() => {
     const bb = nameRef.current.getBBox();
-    const target = layout.w * 0.98;
-    const next = Math.floor((font * target) / bb.width);
-    if (Math.abs(bb.width - target) > 6 && next !== font && fitPasses.current < 4) {
+    // Measure what's actually drawn: Safari's getBBox can disagree with the rendered
+    // width for stretched variable fonts, which let the name run off the screen.
+    const svgRect = svgRef.current.getBoundingClientRect();
+    const unitsPerPx = svgRect.width ? layout.w / svgRect.width : 1;
+    const drawn = nameRef.current.getBoundingClientRect().width * unitsPerPx;
+    const width = Math.max(bb.width, drawn || 0);
+    const target = layout.w * (layout.w < 600 ? 0.94 : 0.98);
+    const next = Math.floor((font * target) / width);
+    if (Math.abs(width - target) > 6 && next !== font && fitPasses.current < 6) {
       fitPasses.current += 1;
       setFont(next);
       return;
     }
-    setBox({ x: bb.x, y: bb.y, w: bb.width, h: bb.height });
-  }, [font, layout]);
+    setBox({ x: bb.x, y: bb.y, w: Math.min(bb.width, layout.w), h: bb.height });
+  }, [font, layout, refit]);
 
   // Hang the subtitle and the trace bus off the measured name, whatever size it fit to.
   const nameY = Math.round(font * 0.78) + 12;

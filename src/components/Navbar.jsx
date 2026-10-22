@@ -150,7 +150,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
 
         <div
           id="mobile-menu"
-          className={`fixed top-16 inset-x-0 bottom-0 bg-ink transition-opacity duration-200 ${
+          className={`fixed top-16 inset-x-0 bottom-0 bg-ink flex flex-col justify-between overflow-y-auto transition-opacity duration-200 ${
             isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
           aria-hidden={!isMobileMenuOpen}
@@ -178,6 +178,28 @@ const Navbar = ({ activeTab, setActiveTab }) => {
               );
             })}
           </ul>
+
+          {/* Same links the desktop side index keeps at its foot */}
+          <div className="flex gap-3 px-5 pt-8 pb-8">
+            <a
+              href="https://www.linkedin.com/in/connor-whitlow-7a1858320/"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={isMobileMenuOpen ? 0 : -1}
+              className="btn btn-ghost flex-1"
+            >
+              LinkedIn ↗
+            </a>
+            <a
+              href="https://github.com/Connorw08"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={isMobileMenuOpen ? 0 : -1}
+              className="btn btn-ghost flex-1"
+            >
+              GitHub ↗
+            </a>
+          </div>
         </div>
       </nav>
     </>
