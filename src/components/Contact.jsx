@@ -6,7 +6,7 @@ const EMAIL = 'connor.whitlow242218@gmail.com';
 
 const details = [
   { label: 'Phone', value: '(910) 408 8381', href: 'tel:+19104088381' },
-  { label: 'Location', value: 'Chapel Hill, NC' },
+  { label: 'Location', value: 'Centreville, VA' },
   { label: 'LinkedIn', value: 'connor-whitlow ↗', href: 'https://linkedin.com/in/connor-whitlow-7a1858320/', external: true },
   { label: 'GitHub', value: 'Connorw08 ↗', href: 'https://github.com/Connorw08', external: true },
 ];
@@ -28,7 +28,7 @@ const Contact = () => {
     <section id="contact">
       <div className="sheet">
         <SectionHeader title="Get in touch">
-          Open to internships, full-time roles, and interesting projects. Email is the fastest way to reach me.
+          Always happy to talk about interesting projects, roles, or ideas. Email is the fastest way to reach me.
         </SectionHeader>
 
         {/* The email is the point of this page, so it leads */}

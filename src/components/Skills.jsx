@@ -8,16 +8,16 @@ const Skills = () => {
       id: 1,
       title: 'Programming Languages',
       skills: [
-        'Python', 'TypeScript', 'JavaScript', 'Java', 'C', 
-        'React', 'Tailwind CSS', 'HTML', 'CSS'
+        'Java', 'TypeScript', 'JavaScript', 'Python', 'SQL', 'C',
+        'HTML', 'CSS'
       ]
     },
     {
       id: 2,
       title: 'Databases & Cloud Technologies',
       skills: [
-        'MongoDB', 'Firebase', 'Cloud Vision AI', 
-        'FastAPI', 'Google Cloud Platform', 
+        'SQL Databases', 'MongoDB', 'Firebase', 'AWS', 'Docker',
+        'Cloud Vision AI', 'FastAPI', 'Google Cloud Platform',
         'RESTful API Design', 'JWT Authentication'
       ]
     },
@@ -25,8 +25,8 @@ const Skills = () => {
       id: 3,
       title: 'Frameworks & Libraries',
       skills: [
-        'React.js', 'Next.js', 'Vite', 
-        'React Query', 'Node.js', 
+        'React.js', 'Angular', 'Next.js', 'React Flow', 'Tailwind CSS',
+        'Vite', 'React Query', 'Node.js',
         'Algorithm Visualization', 
         '3D Printing Design'
       ]
@@ -36,7 +36,7 @@ const Skills = () => {
       title: 'Development Tools',
       skills: [
         'Git', 'GitHub', 'Visual Studio Code', 
-        'Postman', 'Jupyter Notebook', 
+        'Postman', 'Jupyter Notebook', 'RStudio', 'Microsoft PowerPoint (Certified)',
         'Local Storage', 'Image Optimization'
       ]
     },

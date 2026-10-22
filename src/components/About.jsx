@@ -2,9 +2,9 @@ import React from 'react';
 import SectionHeader from './SectionHeader';
 
 const specs = [
-  { label: 'Based in', value: 'Chapel Hill, NC' },
-  { label: 'Studying', value: 'CS + Economics, Data Science minor' },
-  { label: 'Graduating', value: 'May 2026' },
+  { label: 'Role', value: 'Software Engineer, Parsons' },
+  { label: 'Degree', value: 'B.A. CS + Economics, UNC Chapel Hill' },
+  { label: 'Graduated', value: 'May 2026' },
   { label: 'Interests', value: 'Software engineering, AI, finance' },
 ];
 
@@ -44,20 +44,21 @@ const About = () => {
 
           <div className="space-y-6 text-lg leading-relaxed text-fog max-w-2xl">
             <p className="rise text-chalk text-xl md:text-2xl leading-snug" style={{ '--i': 2, fontStretch: '106%' }}>
-              I'm a junior Computer Science and Economics student at the University of North Carolina at Chapel Hill,
-              passionate about software engineering, artificial intelligence, and finance.
+              I'm a full-stack software engineer at Parsons, building Java services and TypeScript interfaces.
+              I graduated from the University of North Carolina at Chapel Hill in May 2026 with a B.A. in Computer
+              Science and Economics and a minor in Data Science.
             </p>
             <p className="rise" style={{ '--i': 3 }}>
-              I currently work at the UNC BeAM Makerspace as a Program Assistant. I conduct technical maintenance
-              and improvements on makerspace equipment and space to ensure optimal performance and accessibility for users.
-              I also lead hands-on workshops and training sessions, allowing students and faculty to successfully
-              utilize complex tools and technology.
+              At Parsons I work across the whole stack: new endpoints, database work, and new frontend components and
+              pages. I started there as an intern, leading frontend work on a data visualization app and building an
+              interactive flow editor with React Flow.
             </p>
             <p className="rise" style={{ '--i': 4 }}>
-              I'm a passionate member of the Carolina Adapts Toys for Children where I collaborate with peers to adapt
-              and modify commercially available toys for children with disabilities. Won Best Game Award at HackNC
-              where I developed Sort Royale, a full-stack project with a team that teaches computer science sorting
-              algorithms in a game-like fashion.
+              At UNC I was a Program Specialist at the BeAM Makerspace, keeping equipment running and teaching weekly
+              workshops on 3D printing, laser cutting, and sewing machines. I was also a member of Carolina Adapts Toys
+              for Children, where I collaborated with peers to adapt
+              and modify commercially available toys for children with disabilities. My team also won Best Game at
+              HackNC with Sort Royale, a full-stack game that teaches computer science sorting algorithms.
             </p>
           </div>
         </div>

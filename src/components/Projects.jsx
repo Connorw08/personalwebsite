@@ -58,8 +58,8 @@ const Projects = () => {
       id: 6,
       icon: '🍽️',
       title: 'Safe Eats',
-      tag: 'Client Project - Technical Lead',
-      description: 'A comprehensive food delivery platform specifically designed to address the critical needs of individuals with food allergies and dietary restrictions. As Technical Lead, I architected a multi-tier application with secure JWT-based authentication handling distinct user types (customers, restaurant owners, and our client). The restaurant management system includes a sophisticated menu builder that tags 14 common allergens and dietary preferences for each dish, with image upload capabilities and automatic image optimization.',
+      tag: 'Start-up · Technical Lead',
+      description: 'A food delivery platform for people with food allergies and dietary restrictions. As Technical Lead, I led a 4-person team that delivered one week ahead of schedule. I architected a multi-tier application with JWT authentication handling three distinct user types (customers, restaurant owners, and administrators), and designed a database schema that filters 14 common allergens across menus for 100+ Chapel Hill restaurants.',
       technologies: ['React', 'Tailwind CSS', 'Python', 'FastAPI', 'Firebase', 'JWT Authentication'],
       link: 'https://restaurant-allergy-manager.onrender.com'
     },
@@ -77,7 +77,7 @@ const Projects = () => {
       icon: '📱',
       title: 'StorySnap',
       tag: 'Android Application',
-      description: 'A creative storytelling application that empowers users to generate unique narratives through images. Users can capture photos or create artwork that gets analyzed by Google Vision Cloud AI to generate descriptive tags. The searchable database allows users to easily retrieve tagged images, and by selecting multiple tagged images, users can generate cohesive stories incorporating these elements using TextCortex AI. The app combines visual creativity with AI-powered storytelling for an engaging user experience.',
+      description: 'A creative storytelling app that turns a user’s images into narratives. Google Vision Cloud AI analyzes each photo and generates descriptive tags with 90% accuracy; selecting several tagged images produces a cohesive story through TextCortex AI. I optimized the SQLite database, cutting image search query time by 35% and improving overall app performance.',
       technologies: ['Java', 'Android SDK', 'Google Vision Cloud AI', 'TextCortex AI', 'SQLite', 'Image Processing'],
       link: 'https://youtu.be/NN2kZDg_pC8?si=P8e5FCCvTIsKiNsrn',
       githubLink: 'https://github.com/Connorw08/StorySnap'

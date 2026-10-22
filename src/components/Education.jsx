@@ -22,13 +22,13 @@ const Education = () => {
             className="rise grid grid-cols-1 md:grid-cols-[220px_minmax(0,1fr)] gap-2 md:gap-10 py-8 md:py-10"
             style={{ '--i': 1, boxShadow: '0 -1px 0 var(--rule-strong)' }}
           >
-            <p className="text-[15px] text-carolina md:pt-2">Expected May 2026</p>
+            <p className="text-[15px] text-fog md:pt-2">Graduated May 2026</p>
             <div>
               <h3 className="text-2xl md:text-4xl font-semibold leading-tight text-chalk">
                 University of North Carolina at Chapel Hill
               </h3>
               <p className="mt-3 text-lg text-fog">
-                B.A. Computer Science and Economics, Minor in Data Science
+                B.A. Computer Science and Economics, Minor in Data Science · GPA 3.65
               </p>
             </div>
           </div>
