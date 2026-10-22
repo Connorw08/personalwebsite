@@ -6,32 +6,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#77a0ce',
-        header: '#5a86b9',
-        secondary: '#bad8eb',
-        light: '#f7fbfc',
-        dark: '#6B8BC3',
-        textColor: '#333',
-        textLight: '#F5F8FC',
-        sectionBgLight: '#f7fbfc',
-        sectionBgDarker: '#e9f0f7',
+        // Navy drafting paper, chalk markings, one Carolina blue accent.
+        ink: 'var(--ink)',
+        raised: 'var(--raised)',
+        well: 'var(--well)',
+        chalk: 'var(--chalk)',
+        fog: 'var(--fog)',
+        slate: 'var(--slate)',
+        carolina: 'var(--carolina)',
+        'carolina-deep': 'var(--carolina-deep)',
+        rule: 'var(--rule)',
+        'rule-strong': 'var(--rule-strong)',
+        signal: 'var(--signal)',
+        fault: 'var(--fault)',
       },
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ['Archivo', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
-      boxShadow: {
-        card: '0 5px 15px rgba(0, 0, 0, 0.05)',
-        cardHover: '0 10px 20px rgba(0, 0, 0, 0.1)',
-      },
-      keyframes: {
-        'fade-in': {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-      },
-      animation: {
-        'fade-in': 'fade-in 0.5s ease-out forwards',
+      maxWidth: {
+        sheet: '72rem',
       },
     },
   },

@@ -1,5 +1,6 @@
 import React from 'react';
 import JobCard from './JobCard';
+import SectionHeader from './SectionHeader';
 
 const Experience = () => {
   const jobs = [
@@ -34,24 +35,23 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="bg-sectionBgDarker">
-      <div className="container">
-        <h2>Professional Experience</h2>
-        <div className="relative max-w-3xl mx-auto pt-12">
-          {/* Timeline vertical line */}
-          <div className="absolute w-0.5 bg-white h-full top-0 left-[60px] ml-[-1.5px] z-0"></div>
-          
-          {/* Job cards */}
-          {jobs.map((job) => (
+    <section id="experience">
+      <div className="sheet">
+        <SectionHeader title="Professional experience" />
+
+        <ol style={{ boxShadow: '0 1px 0 var(--rule-strong)' }}>
+          {jobs.map((job, i) => (
             <JobCard
               key={job.id}
+              index={i}
               title={job.title}
               company={job.company}
               period={job.period}
               description={job.description}
+              current={job.period.includes('Present')}
             />
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

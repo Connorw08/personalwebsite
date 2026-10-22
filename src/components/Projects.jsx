@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import SectionHeader from './SectionHeader';
 
 const Projects = () => {
   const projects = [
@@ -84,14 +85,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-sectionBgLight">
-      <div className="container">
-        <h2>Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-          {projects.map((project) => (
+    <section id="projects">
+      <div className="sheet">
+        <SectionHeader title="Selected work">
+          Hackathon builds, client work, and things made for fun. Open any row for details.
+        </SectionHeader>
+        <ol style={{ boxShadow: '0 1px 0 var(--rule-strong)' }}>
+          {projects.map((project, i) => (
             <ProjectCard
               key={project.id}
-              icon={project.icon}
+              index={i}
+              defaultOpen={i === 0}
               title={project.title}
               tag={project.tag}
               description={project.description}
@@ -100,7 +104,7 @@ const Projects = () => {
               githubLink={project.githubLink}
             />
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

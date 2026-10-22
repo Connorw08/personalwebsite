@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillCategory from './SkillCategory';
+import SectionHeader from './SectionHeader';
 
 const Skills = () => {
   const skillCategories = [
@@ -52,13 +53,14 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="bg-sectionBgLight">
-      <div className="container">
-        <h2>Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {skillCategories.map((category) => (
+    <section id="skills">
+      <div className="sheet">
+        <SectionHeader title="Toolkit" />
+        <div style={{ boxShadow: '0 1px 0 var(--rule-strong)' }}>
+          {skillCategories.map((category, i) => (
             <SkillCategory
               key={category.id}
+              index={i}
               title={category.title}
               skills={category.skills}
             />
